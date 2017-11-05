@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <link href="css/dashboard.css" rel="stylesheet">
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+</head>
+<body>
+<!--<button class="liu btn btn-success">提交</button>-->
+<!--<div id="summernote">Hello Summernote</div>-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Export</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item</a></li>
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+                <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Dashboard</h1>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                增加
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="ti">标题</label>
+                                    <input type="text" class="form-control" id="ti" placeholder="标题">
+                                </div>
+                                <div class="form-group">
+                                    <label for="wr">作者</label>
+                                    <input type="text" class="form-control" id="wr" placeholder="作者">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sj">时间</label>
+                                    <input type="text" class="form-control" id="sj" placeholder="时间">
+                                </div>
+                            </form>
+                            <!-- 下拉菜单 -->
+                            <select id="sel">
+                                <option value="0">业内新闻</option>
+                                <option value="1">企业新闻</option>
+                            </select>
+                            <h3>详情</h3>
+                            <div id="summernote">Hello Summernote</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="liu btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2 class="sub-header">Section title</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>标题</th>
+                        <th>作者</th>
+                        <th>时间</th>
+                        <th>内容</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" >
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 30px;">
+            <form>
+                <div class="form-group">
+                    <label for="ti">标题</label>
+                    <input type="text" class="form-control" id="lti" placeholder="标题">
+                </div>
+                <div class="form-group">
+                    <label for="wr">作者</label>
+                    <input type="text" class="form-control" id="lwr" placeholder="作者">
+                </div>
+                <div class="form-group">
+                    <label for="sj">时间</label>
+                    <input type="text" class="form-control" id="lsj" placeholder="时间">
+                </div>
+            </form>
+            <div class="summernote"></div>
+            <input class="btn btn-default" type="submit" value="Submit">
+            <button type="button" class="btn btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $('#summernote').summernote();
+        $(".liu").click(function(){
+            var title=$("#ti").val();
+            var write=$("#wr").val();
+            var sj=$("#sj").val();
+            var sel=$('#sel').val(); // 下拉
+
+            $.ajax({
+                url:"http://localhost:3000/item/insert",
+                dataType:"json",
+                type:"post",
+                data:{
+                    title:title,
+                    write:write,
+                    sj:sj,
+                    sel:sel,
+                    color:$("#summernote").summernote("code")
+                },
+                success:function(e){
+                    console.log(e)
+                    aja()
+                }
+            })
+
+        })
+
+        function aja(){
+            $.ajax({
+                url:"http://localhost:3000/item/cha",
+                dataType:"json",
+                type:"post",
+                success:function(e){
+                    console.log(e)
+                    $("tbody").html("");
+                    for(var i in e){
+                        $("tbody").append('<tr><td>'+e[i].uid+'</td><td>'+e[i].wr+'</td><td>'+e[i].tit+'</td><td>'+e[i].shij+'</td><td>'+e[i].color+'</td><td class="byl glyphicon glyphicon-edit" data-toggle="modal" data-target=".bs-example-modal-lg" data-cc='+e[i].id+'></td><td class="glyphicon glyphicon-trash" data-id='+e[i].id+'></td></tr>')
+                    }
+                    $("td:last-child").click(function(){
+                        var id=$(this).attr("data-id");
+                        var _this=$(this);
+                        $.ajax({
+                            url:"http://localhost:3000/item/del",
+                            type:"POST",
+                            data:{id:id},
+                            success:function(e){
+                                _this.parent().remove()
+                            }
+                        })
+                    })
+                    // 修改
+                    $('.summernote').summernote();
+                    $('.byl').click(function(){
+                        var id=$(this).attr('data-cc')
+                        $('.btn').attr('data-cc',id)
+                    })
+                    $('.btn').click(function(){
+                        var b=$('.summernote').summernote('code');  // 详情
+                        var xtit=$('#lti').val(); // 标题
+                        var xzz=$('#lwr').val();  // 作者
+                        var sj=$("#lsj").val();
+                        var yy=$(this).attr('data-cc');
+                        $.ajax({
+                            url:'http://localhost:3000/item/update',
+                            type:'post',
+                            dataType:'json',
+                            data:{
+                                b:b,
+                                xtit:xtit,
+                                xzz:xzz,
+                                sj:sj,
+                                yy:yy
+                            },
+                            success:function(e){
+                                console.log(e)
+                            }
+                        })
+                    })
+
+
+                }
+            })
+        }
+        aja()
+    })
+</script>
+</body>
+</html>
